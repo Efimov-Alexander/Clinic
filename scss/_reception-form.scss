@@ -1,0 +1,86 @@
+.reception-form {
+	position: fixed;
+	display: none;
+	top: 50%;
+	left: 50%;
+	z-index: 200;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	min-width: 520px;
+	border-radius: 5px;
+	background-color: #f5f5f5;
+	padding: 20px 30px;
+	text-align: center;
+	@media (max-width: 767.98px) {
+		min-width: 480px;
+	}
+	@media (max-width: 479.98px) {
+		width: 100%;
+		min-width: 0px;
+		padding: 15px 20px;
+	}
+	&._active {
+		display: block;
+	}
+	&__title {
+		color: #0dbc91;
+		font-size: 24px;
+		margin-bottom: 24px;
+	}
+	&__close-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		cursor: pointer;
+		span {
+			pointer-events: none;
+			position: absolute;
+			display: block;
+			height: 2px;
+			width: 100%;
+			border-radius: 5px;
+			background-color: #0dbc91;
+		}
+		span:first-child {
+			transform: rotate(45deg);
+		}
+		span:last-child {
+			transform: rotate(-45deg);
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		margin-bottom: 16px;
+	}
+
+	&__name {
+	}
+
+	&__surname {
+	}
+
+	&__tel {
+	}
+
+	&__email {
+	}
+
+	&__message {
+		height: 100px;
+		resize: none;
+	}
+
+	&__submit-button {
+		margin: 0 auto;
+		border-radius: 5px;
+		height: 32px;
+		font-size: 16px;
+	}
+}

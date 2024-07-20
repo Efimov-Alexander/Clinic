@@ -1,0 +1,264 @@
+.multi-profile {
+	@media (max-width: 767.98px) {
+		margin-top: 66px;
+	}
+	&__wrapper {
+		background-color: #f8fbfa;
+		position: relative;
+		&::after {
+			position: absolute;
+			right: 0;
+			top: 0;
+			content: "";
+			background: url("../img/childrens-room.jpg") center / cover no-repeat;
+			display: block;
+			height: 100%;
+			width: 50vw;
+			@media (max-width: 767.98px) {
+				display: none;
+			}
+		}
+	}
+
+	&__container {
+	}
+
+	&__body {
+		padding: 144px 0px 162px 0px;
+		@media (max-width: 767.98px) {
+			padding: 0px 0px 52px 0px;
+		}
+	}
+	&__image-wrapper {
+		margin: 0px -16px 36px -16px;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		@media (min-width: 767.98px) {
+			display: none;
+		}
+	}
+	&__info-wrapper {
+	}
+	&__title {
+		max-width: calc(50% - 30px);
+		font-size: 36px;
+		font-weight: 700;
+		margin-bottom: 14px;
+		@media (max-width: 767.98px) {
+			max-width: none;
+			margin-bottom: 8px;
+			font-size: 26px;
+		}
+	}
+	&__info {
+		max-width: 367px;
+		line-height: 150%;
+		@media (max-width: 767.98px) {
+			font-size: 14px;
+		}
+	}
+}
+
+.check-up {
+	&__container {
+	}
+
+	&__body {
+	}
+
+	&__swiper {
+	}
+}
+
+.swiper-check-up {
+	overflow: hidden;
+	padding: 100px 0px 92px 0px;
+	@media (max-width: 767.98px) {
+		padding: 48px 0px 36px 0px;
+	}
+	&__wrapper {
+		margin-bottom: 34px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 22px;
+		}
+	}
+	&__slide {
+	}
+
+	&__navigation {
+		display: flex;
+		gap: 36px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__pagination {
+		width: auto;
+		position: static;
+		font-size: 18px;
+		color: #c0c0c0;
+		.swiper-pagination-current {
+			color: $mainColor;
+		}
+	}
+
+	&__prev,
+	&__next {
+		position: static;
+		margin: 0px 0px 0px 0px;
+		height: 34px;
+		width: 34px;
+		&::after {
+			content: "";
+		}
+		@media (any-hover: hover) {
+			path {
+				transition: all 0.2s ease 0s;
+			}
+			&:hover {
+				path {
+					fill: #0dbc91;
+				}
+			}
+		}
+	}
+
+	&__prev {
+	}
+	&__next {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.slide-check-up {
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		background: url("/img/svg/slide-background.svg") right / cover no-repeat;
+		width: calc(613 / 1140 * 100%);
+		height: 100%;
+		overflow: hidden;
+	}
+	@media (max-width: 767.98px) {
+		display: flex;
+		flex-direction: column;
+		&::before {
+			content: none;
+		}
+	}
+	&__info-wrapper {
+		position: relative;
+		z-index: 20;
+		padding: 53px 0px 56px 63px;
+		max-width: calc(50% - 80px);
+		@media (max-width: 767.98px) {
+			background-color: #e2f0ef;
+			max-width: none;
+			padding: 24px 24px 40px 24px;
+		}
+	}
+	&__image {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: calc(692 / 1140 * 100%);
+		object-fit: cover;
+		object-position: right;
+		height: 100%;
+		@media (max-width: 950px) {
+			width: calc(800 / 1140 * 100%);
+		}
+		@media (max-width: 767.98px) {
+			position: static;
+			width: auto;
+		}
+	}
+	&__title {
+		font-size: 38px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+		@media (max-width: 767.98px) {
+			font-size: 26px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 22px;
+		font-weight: 700;
+		margin-bottom: 16px;
+		@media (max-width: 767.98px) {
+			font-size: 14px;
+		}
+	}
+
+	&__list {
+	}
+
+	&__list-item {
+		list-style: url("/img/svg/list-style-inside.svg");
+		list-style-position: inside;
+		color: #1fa181;
+		@media (max-width: 767.98px) {
+			font-size: 14px;
+			line-height: 145%;
+		}
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+		&:last-child {
+			margin-bottom: 32px;
+			@media (max-width: 767.98px) {
+				margin-bottom: 18px;
+			}
+		}
+		span {
+			color: $mainColor;
+		}
+	}
+
+	&__price {
+		font-size: 20px;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 24px;
+		@media (max-width: 767.98px) {
+			margin-bottom: 28px;
+		}
+		span {
+			font-size: 16px;
+			color: #868686;
+			text-decoration-line: line-through;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 14px;
+		flex-wrap: wrap;
+		@media (max-width: 767.98px) {
+			gap: 6px;
+		}
+	}
+
+	&__reception-button,
+	&__more-button {
+		padding: 0 60px;
+		@media (max-width: 767.98px) {
+			padding: 0 28px;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+@import "fonts";
+$fontFamily: "SansCaption";
+$fontSize: 16px;
+$mainColor: #364844;
+//
+@import "null";
+//
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+//
+._container {
+	max-width: 1172px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+//
+.overlay {
+	background-color: #000000;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 150;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	display: none;
+	&._active {
+		display: block;
+	}
+}
+@import "ui";
+//
+@import "header";
+@import "footer";
+@import "swiper";
+@import "home";
+@import "reception-form";
+//
+.page {
+	flex: 1 1 auto;
+}

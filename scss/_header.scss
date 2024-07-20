@@ -1,0 +1,226 @@
+body {
+	&._active {
+		overflow: hidden;
+	}
+}
+.header {
+	&__top-wrapper {
+	}
+
+	&__bot-wrapper {
+	}
+}
+.top-header {
+	@media (max-width: 767.98px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		background-color: #f6f6f6;
+	}
+	&__container {
+	}
+
+	&__body {
+		min-height: 68px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 767.98px) {
+			min-height: 66px;
+		}
+	}
+
+	&__logo-header {
+	}
+
+	&__actions {
+	}
+}
+.icon-menu {
+	display: none;
+	@media (max-width: 767.98px) {
+		cursor: pointer;
+		display: flex;
+		height: 26px;
+		width: 36px;
+		flex-direction: column;
+		justify-content: space-between;
+		position: relative;
+		span {
+			pointer-events: none;
+			display: block;
+			height: 4px;
+			width: 100%;
+			background-color: #1fa181;
+			transition: all 0.2s ease 0s;
+		}
+		&._active {
+			justify-content: center;
+			span {
+				position: absolute;
+			}
+			span:nth-child(2) {
+				display: none;
+			}
+			span:first-child {
+				transform: rotate(45deg);
+			}
+			span:last-child {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+.logo-header {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	@media (max-width: 767.98px) {
+		padding-right: calc(12 / 343 * 100%);
+	}
+	&__logo {
+		img {
+			width: 92px;
+			height: 28px;
+			@media (max-width: 767.98px) {
+				height: 18px;
+				width: 62px;
+			}
+		}
+	}
+	&__location {
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		gap: 2px;
+		@media (max-width: 767.98px) {
+			display: none;
+		}
+	}
+	&__city {
+		font-weight: 400;
+		font-size: 14px;
+		color: $mainColor;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		&::before {
+			content: url("/img//svg/mark.svg");
+			height: 20px;
+			width: 20px;
+			transform: translateY(-2px);
+		}
+	}
+
+	&__street {
+		font-weight: 400;
+		font-size: 14px;
+		color: #868686;
+	}
+}
+.actions-header {
+	display: flex;
+	align-items: center;
+	gap: 36px;
+	@media (max-width: 767.98px) {
+		flex-direction: column;
+		gap: 0;
+		align-items: end;
+	}
+	&__phone {
+		color: $mainColor;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		&::before {
+			content: url("/img/svg/whatsapp-header.svg");
+			@media (max-width: 767.98px) {
+				display: none;
+			}
+		}
+		@media (max-width: 767.98px) {
+			font-weight: 700;
+			margin-bottom: 4px;
+		}
+	}
+	&__location {
+		display: none;
+		@media (max-width: 767.98px) {
+			display: block;
+			color: $mainColor;
+			font-size: 14px;
+		}
+	}
+	&__reception-button {
+		@media (max-width: 767.98px) {
+			display: none;
+		}
+	}
+}
+.bot-header {
+	background-color: #1fa181;
+	@media (max-width: 767.98px) {
+		overflow: auto;
+		position: fixed;
+		visibility: hidden;
+		background-color: rgba(69, 146, 127, 0.9);
+		backdrop-filter: blur(2px);
+		height: 100%;
+		width: 100%;
+		z-index: 100;
+		top: 66px;
+		left: -100%;
+		transition: all 0.2s ease 0s;
+		&._active {
+			visibility: visible;
+			left: 0;
+		}
+	}
+	&__container {
+		@media (max-width: 767.98px) {
+			padding: 48px 16px 114px 16px;
+		}
+	}
+
+	&__body {
+	}
+
+	&__menu {
+	}
+
+	&__reception-button {
+		display: none;
+		@media (max-width: 767.98px) {
+			display: inline-flex;
+		}
+	}
+}
+.menu-header {
+	@media (max-width: 767.98px) {
+		margin: 0px 0px 40px 0px;
+	}
+
+	&__body {
+	}
+
+	&__list {
+		min-height: 44px;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		@media (max-width: 767.98px) {
+			flex-direction: column;
+			gap: 20px;
+			align-items: start;
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		color: #fff;
+	}
+}
